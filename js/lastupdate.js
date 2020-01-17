@@ -1,2 +1,2 @@
 var lastdate = document.lastModified;
-document.write(lastdate);
+document.getElementById("lastUpdate").innerText = "Page Last Modified: " + lastdate; 
