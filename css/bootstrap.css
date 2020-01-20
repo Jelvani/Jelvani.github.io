@@ -9057,7 +9057,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 #address{
-  font-weight: 400;
+  font-weight:bold;
+  
 }
 .language{
 
