@@ -421,6 +421,7 @@ h6, .h6 {
 }
 
 .display-4 {
+  
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2;
@@ -4890,7 +4891,8 @@ input[type="button"].btn-block {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #e9ecef;
+  background-color: rgba(255, 255, 255, 0.726);
+  color: #000000;
   border-radius: 0.3rem;
 }
 
@@ -9107,7 +9109,14 @@ a.text-dark:hover, a.text-dark:focus {
  .links{
    color: inherit;
  }
-
+ canvas {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  }
 
 /* Animations*/
 @keyframes bodybackground {
