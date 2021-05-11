@@ -27,7 +27,7 @@ comments:
 
   commitMessage: "New comment by {fields.name}"
 
-  # (*) REQUIRED
+  # (*) REQUIRED 
   #
   # Destination path (filename) for the data files. Accepts placeholders.
   filename: "comment-{@timestamp}"
