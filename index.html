@@ -1,333 +1,127 @@
-<!DOCTYPE html>
+---
+layout: home
+author_profile: true
 
-<html lang="en">
+header:
+  image: /assets/images/banner.jpg
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300&display=swap" rel="stylesheet">
-  <title>My Website</title>
-  <meta name="My Personal site" content="">
-  <meta name="Alborz Jelvani" content="Resume">
+feature_row:
+- title: "Nature of Code"
+  excerpt: "An interesting online book about the intersection between the physical world and representing this with code. I was mostly interested in the mandelbrot set and L-systems from looking through this book."
+  url: "https://natureofcode.com/book/introduction/"
+  btn_label: "Read More"
+  btn_class: "btn"
 
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
-  <script src="https://kit.fontawesome.com/a9f4836826.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.1.0/math.js" type="text/javascript"></script>
+- title: "Neural Networks and Deep Learning"
+  excerpt: "An amazing online book that explains the concept of neural networks and dives into deep learning topics."
+  url: "http://neuralnetworksanddeeplearning.com/"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "Fractals and Chaotic Systems"
+  excerpt: "A nice website that introduces chaotic systems and fractals, I was drawn to this topic after testing some generative art with fractals."
+  url: "https://www.stsci.edu/~lbradley/seminar/index.html"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "Learn about USB"
+  excerpt: "A descriptive website on the workings of the USB 2.0 protocol."
+  url: "https://www.beyondlogic.org/usbnutshell/usb1.shtml"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "3D Graphics from Scratch"
+  excerpt: "A blog I referenced when working on 3D graphics from scratch in javascript."
+  url: "https://danlucraft.com/blog/2016/12/3d-from-scratch-intro/"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "Kalman Filter"
+  excerpt: "A well put together website explaining the motivation for and implementation of a kalman filter."
+  url: "https://www.kalmanfilter.net/default.aspx"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "SIMD Programming"
+  excerpt: "A practical intro to SIMD parallel computing."
+  url: "http://sci.tuomastonteri.fi/programming/sse"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "SQL Injection and More"
+  excerpt: "A blog containing direct examples and methods for SQL injection attacks, and some Google Dorks. The site also contains various other hacking topics."
+  url: "https://sites.google.com/site/19kunie/home/sqli-tutorial"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "Mathematics for Computer Science"
+  excerpt: "This was the textbook used in my discrete math class, and I find myself coming back to it many times for reference and to brush up on topics. I highly recommend this book for reference and self-learning."
+  url: "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/readings/MIT6_042JS15_textbook.pdf"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "Writing a Simple Operating System — from Scratch"
+  excerpt: "A paper I am in the process of reading, but so far has explained the exact boot process of an x86 computer in detail and simplicity, answering my questions about everything that goes on before control is passed to the OS."
+  url: "https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "Improving Trust in Software through Diverse Double-Compiling and Reproducible Builds"
+  excerpt: "A thesis on a method to counter trusting-trust attacks."
+  url: "https://www.duo.uio.no/handle/10852/65737"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "Linux Drivers"
+  excerpt: "A comprehensive guide to Linux drivers that I have looked at for reference on memory mapped I/O, but plan to read through."
+  url: "https://sysplay.github.io/books/LinuxDrivers/book/index.html"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "Control"
+  excerpt: "A chapter from Cornell's CS 4750 course. An introduction to control, I read this to get an idea of how pure pursuit controllers work."
+  url: "https://rpal.cs.cornell.edu/foundations/control.pdf"
+  btn_label: "Read More"
+  btn_class: "btn"
+
+- title: "PID Controller"
+  excerpt: "This is the website I used for an introduction into PID control, and to implement my first PID controller."
+  url: "https://www.csimn.com/CSI_pages/PIDforDummies.html"
+  btn_label: "Read More"
+  btn_class: "btn"
   
-</head>
+- title: "Reflections on Trusting Trust"
+  excerpt: "An interesting read on trusting compilers, and the impact a breech on one could have."
+  url: "https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf"
+  btn_label: "Read More"
+  btn_class: "btn"
 
-<body>
-  <canvas id=canvas></canvas>
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-13">
-        <!--jumbotron name and picture start-->
-        <div class="alert alert-primary" id = "lastUpdate" role="alert">
-         
-        </div>
+- title: "Phil's Lab"
+  excerpt: "When I was working on an embedded system PCB design, I was in need of a good resource for practices to follow and common methods, after watching a few of his PCB design walkthroughs, I gained a good intuition."
+  url: "https://www.youtube.com/c/PhilS94"
+  btn_label: "Read More"
+  btn_class: "btn"
 
-        <div class="jumbotron">
-          <div class="row">
+- title: "Computer Systems: A Programmer's Perspective"
+  excerpt: "This textbook was used for my computer architecture and systems programming courses, and it is great at explaining computing systems from the ground up, while maintaining simplicity. I highly recommend this to anyone looking for a solid introduction to low-level computing topics."
+  url: "https://csapp.cs.cmu.edu/"
+  btn_label: "Read More"
+  btn_class: "btn"
 
-            <div class="col-7">
-              <h1 class="display-4" id="name">Alborz Jelvani</h1>
-              <p class="lead">Rutgers University 2022, Computer Science and some Mathematics</p>
-            </div>
+- title: "Real-time control of balancing robot using ROS"
+  excerpt: "A thesis paper about balancing a robot. I read this mainly because I was interested in how real-time control was implemented with ROS and RT-Linux."
+  url: "https://uhcl-ir.tdl.org/handle/10657.1/1416"
+  btn_label: "Read More"
+  btn_class: "btn"
 
-          </div>
+- title: "A Survey of Indoor Localization Systems and Technologies"
+  excerpt: "A brief survey paper about popular localization methods used with wireless radio technologies."
+  url: "https://arxiv.org/pdf/1709.01015.pdf"
+  btn_label: "Read More"
+  btn_class: "btn"
 
-        </div>
-        <!--jumbotron name and picture end-->
-        <!--jumbotron about start-->
+---
 
-        <!--jumbotron about end-->
-        <article class="jumbotron" id="projects">
-          <div class="row">
-            <h1 class="display-2">Cool Reads and Resources</h1>
-            <p class="lead">Below are some resources I have used in the past few years. I plan to 
-              update this list with new textbooks after each semester of using that book, and will continuously update
-              the list with other resources I use for projects and self-learning.
-            </p>
-          </div>
-          <p class="lead">
-            <div class="card-columns" id="projectcontainer">
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Nature of Code
-                    </h5>
-                  <p class="card-text">An interesting online book about the intersection between the physical
-                    world and representing this with code. I was mostly interested in the mandelbrot set and 
-                    L-systems from looking through this book.
-                  </p>
-                  <a href="https://natureofcode.com/book/introduction/" target="_blank"
-                    class="btn btn-primary">Read</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Fractals and Chaotic Systems
-                    </h5>
-                  <p class="card-text">A nice website that introduces chaotic systems and fractals,
-                    I was drawn to this topic after testing some generative art with fractals.
-                  </p>
-                  <a href="https://www.stsci.edu/~lbradley/seminar/index.html" target="_blank"
-                    class="btn btn-primary">Visit</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">3D Graphics from Scratch
-                    </h5>
-                  <p class="card-text">A blog I referenced when working on 3D graphics from
-                    scratch in javascript (see the cool polyhedrons in the background? Yea thats 
-                    being computed in real-time on your device right now, sorry for the
-                    CPU overhead).
-                  </p>
-                  <a href="https://danlucraft.com/blog/2016/12/3d-from-scratch-intro/" target="_blank"
-                    class="btn btn-primary">Visit</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">SIMD Programming
-                    </h5>
-                  <p class="card-text">A practical intro to SIMD parallel computing.
-                  </p>
-                  <a href="http://sci.tuomastonteri.fi/programming/sse" target="_blank"
-                    class="btn btn-primary">Read</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Mathematics for Computer Science</h5>
-                  <p class="card-text">This was the textbook used in my discrete math class, 
-                    and I find myself coming back to it many times for reference and to brush up on topics.
-                    I highly recommend this book for reference and self-learning.</p>
-                  <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/readings/MIT6_042JS15_textbook.pdf" class="btn btn-primary">Read</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Improving Trust in Software through Diverse Double-Compiling and Reproducible Builds</h5>
-                  <p class="card-text">A thesis on a method to counter trusting-trust attacks.
-                  </p>
-                  <a href="https://www.duo.uio.no/handle/10852/65737" target="_blank" class="btn btn-primary">Read</a>
-                </div>
+<h2>Cool Reads and Resources</h2>
 
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Control</h5>
-                  <p class="card-text">A chapter from Cornell's CS 4750 course. An introduction to control, I read this to get an idea of how pure pursuit controllers work.
-                  </p>
-                  <a href="https://rpal.cs.cornell.edu/foundations/control.pdf" target="_blank" class="btn btn-primary">Read</a>
-                </div>
-
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Reflections on Trusting Trust</h5>
-                  <p class="card-text">An interesting read on trusting compilers, and the impact a breech on one could have.
-                  </p>
-                  <a href="https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf" target="_blank" class="btn btn-primary">Read</a>
-                </div>
-              </div>
-              <!--Card End-->
-              
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Computer Systems: A Programmer's Perspective</h5>
-                  <p class="card-text">This textbook was used for my computer architecture and systems programming
-                    courses, and it is great at explaining computing systems from the ground up, while maintaining
-                    simplicity. I highly recommend this to anyone looking for a solid introduction to low-level
-                    computing topics.
-                  </p>
-                  <a href="https://csapp.cs.cmu.edu/" target="_blank"
-                    class="btn btn-primary">Read</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Neural Networks and Deep Learning</h5>
-                  <p class="card-text">An amazing online book that explains the concept of neural networks
-                    and dives into deep learning topics.
-                  </p>
-                  <a href="http://neuralnetworksanddeeplearning.com/" target="_blank"
-                    class="btn btn-primary">Visit</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Learn about USB</h5>
-                  <p class="card-text">A descriptive website on the workings of the USB 2.0 protocol.
-                  </p>
-                  <a href="https://www.beyondlogic.org/usbnutshell/usb1.shtml" target="_blank"
-                    class="btn btn-primary">Visit</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Kalman Filter</h5>
-                  <p class="card-text">A well put together website explaining the motivation for and 
-                    implementation of a kalman filter.
-                  </p>
-                  <a href="https://www.kalmanfilter.net/" target="_blank"
-                    class="btn btn-primary">Visit</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">SQL Injection and More</h5>
-                  <p class="card-text">A blog containing direct examples and methods for SQL injection attacks,
-                    and some Google Dorks. The site also contains various other hacking topics.
-                  </p>
-                  <a href="https://sites.google.com/site/19kunie/home/sqli-tutorial" target="_blank"
-                    class="btn btn-primary">Visit</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Writing a Simple Operating System — from Scratch
-                    </h5>
-                  <p class="card-text">A paper I am in the process of reading, but so far has explained the exact
-                    boot process of an x86 computer in detail and simplicity, answering my questions about
-                    everything that goes on before control is passed to the OS.
-                  </p>
-                  <a href="https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf" target="_blank"
-                    class="btn btn-primary">Read</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Linux Drivers
-                    </h5>
-                  <p class="card-text">A comprehensive guide to Linux drivers that I have looked at for reference
-                  on memory mapped I/O, but plan to read through.
-                  </p>
-                  <a href="https://sysplay.github.io/books/LinuxDrivers/book/index.html" target="_blank"
-                    class="btn btn-primary">Read</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">PID Controller
-                    </h5>
-                  <p class="card-text">This is the website I used for an introduction into PID control, and to
-                    implement my first PID controller.
-                  </p>
-                  <a href="https://www.csimn.com/CSI_pages/PIDforDummies.html" target="_blank"
-                    class="btn btn-primary">Visit</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Phil's Lab
-                    </h5>
-                  <p class="card-text">When I was working on an embedded system PCB design, I was in need of 
-                    a good resource for practices to follow and common methods, after watching a few of his PCB
-                    design walkthroughs, I gained a good intuition.
-                  </p>
-                  <a href="https://www.youtube.com/c/PhilS94" target="_blank"
-                    class="btn btn-primary">Visit</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Real-time control of balancing robot using ROS
-                    </h5>
-                  <p class="card-text">A thesis paper about balancing a robot. I read this mainly because I
-                    was interested in how real-time control was implemented with ROS and RT-Linux.
-                  </p>
-                  <a href="https://uhcl-ir.tdl.org/handle/10657.1/1416" target="_blank"
-                    class="btn btn-primary">Read</a>
-                </div>
-              </div>
-              <!--Card End-->
-              <!--Card Begin-->
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">A Survey of Indoor Localization Systems and Technologies
-                    </h5>
-                  <p class="card-text">A brief survey paper about popular localization methods
-                    used with wireless radio technologies.
-                  </p>
-                  <a href="https://arxiv.org/pdf/1709.01015.pdf" target="_blank"
-                    class="btn btn-primary">Read</a>
-                </div>
-              </div>
-              <!--Card End-->
-              
-            </div>
-
-            
-          </p>
-        </article>
-        
-        <div class="jumbotron" id="contact">
-          <div class="row">
-            <h1 class="display-4">Contact</h1>
-          </div>
-          <p class="lead">
-            <address class="lead" id="address">
-              Hover Over to View Email
-              <noscript>Please enable javascript to view my email!
-              </noscript>
-            </address>
-            
-            
-          </p>
-          <hr class="my-4">
-          
-          <a class="links" href="https://www.linkedin.com/in/alborzjelvani/" target="_blank">
-            <i class="fab fa-linkedin fa-4x icons"></i>
-          </a>
-        
-          <a class="links" href="https://github.com/Jelvani" target="_blank">
-            <i class="fab fa-github-square fa-4x icons"></i>
-          </a>
-
-          
-        </div>
-      </div>
-    </div>
-    
-</body>
-<script src="js/draw.js"></script>
-</html>
+{% include feature_row %}
